@@ -1,0 +1,2 @@
+led.c:23: info 121: function 'clock', # edges 1 , # nodes 2 , cyclomatic complexity 1
+led.c:42: info 121: function 'main', # edges 3 , # nodes 3 , cyclomatic complexity 2
