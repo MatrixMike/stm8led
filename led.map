@@ -7,10 +7,8 @@ Area                                    Addr        Size        Decimal Bytes (A
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-     FFFFFFFF  s_SSEG                          
      00000000  .__.ABS.                           led
      00000000  l_CABS                          
-     00000000  l_CONST                         
      00000000  l_DABS                          
      00000000  l_DATA                          
      00000000  l_INITIALIZED                   
@@ -22,23 +20,23 @@ Area                                    Addr        Size        Decimal Bytes (A
      00000001  l_SSEG                          
      00000001  s_DATA                          
      00000001  s_INITIALIZED                   
+     00000001  s_SSEG                          
      00000003  l_GSFINAL                       
-     00000007  l_HOME                          
      0000001A  l_GSINIT                        
-     00000042  l_CODE                          
+     0000004F  l_CODE                          
+     00000083  l_HOME                          
      00008000  s_HOME                          
-     00008007  s_GSINIT                        
-     00008021  s_GSFINAL                       
-     00008024  s_CODE                          
-     00008066  s_CONST                         
-     00008066  s_INITIALIZER                   
+     00008083  s_GSINIT                        
+     0000809D  s_GSFINAL                       
+     000080A0  s_CODE                          
+     000080EF  s_INITIALIZER                   
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 2.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-SSEG                                FFFFFFFF    00000001 =           1. bytes (REL,CON)
+SSEG                                00000001    00000001 =           1. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -47,101 +45,124 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-HOME                                00008000    00000007 =           7. bytes (REL,CON)
+HOME                                00008000    00000083 =         131. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-     00008000  A$led$37                           led
-     00008004  A$led$72                           led
-
+     00008000  A$led$38                           led
+     00008004  A$led$39                           led
+     00008008  A$led$40                           led
+     0000800C  A$led$41                           led
+     00008010  A$led$42                           led
+     00008014  A$led$43                           led
+     00008018  A$led$44                           led
+     0000801C  A$led$45                           led
+     00008020  A$led$46                           led
+     00008024  A$led$47                           led
+     00008028  A$led$48                           led
+     0000802C  A$led$49                           led
+     00008030  A$led$50                           led
+     00008034  A$led$51                           led
+     00008038  A$led$52                           led
+     0000803C  A$led$53                           led
+     00008040  A$led$54                           led
+     00008044  A$led$55                           led
+     00008048  A$led$56                           led
+     0000804C  A$led$57                           led
+     00008050  A$led$58                           led
+     00008054  A$led$59                           led
+     00008058  A$led$60                           led
+     0000805C  A$led$61                           led
+     00008060  A$led$62                           led
+     00008064  A$led$63                           led
+     00008068  A$led$64                           led
+     0000806C  A$led$65                           led
+     00008070  A$led$66                           led
+     00008074  A$led$67                           led
+     00008078  A$led$68                           led
+     0000807C  A$led$69                           led
+     00008080  A$led$104                          led
 ASxxxx Linker V03.00 + NoICE + sdld,  page 4.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-GSINIT                              00008007    0000001A =          26. bytes (REL,CON)
+GSINIT                              00008083    0000001A =          26. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-     00008007  A$led$48                           led
-     0000800A  A$led$49                           led
-     0000800C  A$led$51                           led
-     00008010  A$led$52                           led
-     00008011  A$led$53                           led
-     00008013  A$led$55                           led
-     00008016  A$led$56                           led
-     00008018  A$led$58                           led
-     0000801B  A$led$59                           led
-     0000801E  A$led$60                           led
-     0000801F  A$led$61                           led
+     00008083  A$led$80                           led
+     00008086  A$led$81                           led
+     00008088  A$led$83                           led
+     0000808C  A$led$84                           led
+     0000808D  A$led$85                           led
+     0000808F  A$led$87                           led
+     00008092  A$led$88                           led
+     00008094  A$led$90                           led
+     00008097  A$led$91                           led
+     0000809A  A$led$92                           led
+     0000809B  A$led$93                           led
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 5.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-GSFINAL                             00008021    00000003 =           3. bytes (REL,CON)
+GSFINAL                             0000809D    00000003 =           3. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-     00008021  A$led$65                           led
+     0000809D  A$led$97                           led
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 6.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CODE                                00008024    00000042 =          66. bytes (REL,CON)
+CODE                                000080A0    0000004F =          79. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-     00008024  A$led$88                           led
-     00008024  C$led.c$19$0_0$2                   led
-     00008024  G$clock$0$0                        led
-     00008024  _clock                             led
-     00008026  A$led$92                           led
-     00008026  C$led.c$21$1_0$2                   led
-     00008029  A$led$93                           led
-     0000802A  A$led$97                           led
-     0000802A  C$led.c$22$1_0$2                   led
-     0000802D  A$led$104                          led
-     0000802D  C$led.c$23$1_0$2                   led
-     0000802F  A$led$107                          led
-     00008031  A$led$109                          led
-     00008033  A$led$110                          led
-     00008034  A$led$112                          led
-     00008036  A$led$114                          led
-     00008037  A$led$120                          led
-     00008039  A$led$123                          led
-     00008039  C$led.c$24$1_0$2                   led
-     00008039  XG$clock$0$0                       led
-     0000803A  A$led$137                          led
-     0000803A  C$led.c$27$1_0$4                   led
-     0000803A  C$led.c$29$1_0$4                   led
-     0000803A  G$main$0$0                         led
-     0000803A  _main                              led
-     0000803E  A$led$141                          led
-     0000803E  C$led.c$33$1_0$4                   led
-     00008042  A$led$145                          led
-     00008042  C$led.c$34$1_0$4                   led
-     00008046  A$led$149                          led
-     00008046  C$led.c$36$1_0$4                   led
-     0000804A  A$led$153                          led
-     0000804A  C$led.c$38$1_0$4                   led
-     0000804E  A$led$157                          led
-     0000804E  C$led.c$39$1_0$4                   led
-     00008052  A$led$163                          led
-     00008052  C$led.c$42$2_0$5                   led
-     00008055  A$led$165                          led
-     00008059  A$led$166                          led
-     0000805A  A$led$169                          led
-     0000805E  A$led$170                          led
-     0000805F  A$led$171                          led
-     00008060  A$led$173                          led
-     00008063  A$led$175                          led
-     00008065  A$led$184                          led
-     00008065  C$led.c$43$2_0$4                   led
-     00008065  XG$main$0$0                        led
+     000080A0  A$led$118                          led
+     000080A0  _clock                             led
+     000080A2  A$led$121                          led
+     000080A5  A$led$122                          led
+     000080A6  A$led$123                          led
+     000080A8  A$led$127                          led
+     000080AB  A$led$128                          led
+     000080AC  A$led$133                          led
+     000080AE  A$led$135                          led
+     000080B0  A$led$138                          led
+     000080B2  A$led$140                          led
+     000080B4  A$led$141                          led
+     000080B5  A$led$142                          led
+     000080B7  A$led$143                          led
+     000080B9  A$led$144                          led
+     000080BA  A$led$149                          led
+     000080BC  A$led$152                          led
+     000080BC  C$led.c$24$1$2                     led
+     000080BC  XG$clock$0$0                       led
+     000080BD  A$led$163                          led
+     000080BD  _main                              led
+     000080C1  A$led$166                          led
+     000080C5  A$led$169                          led
+     000080C9  A$led$172                          led
+     000080CD  A$led$175                          led
+     000080D1  A$led$178                          led
+     000080D5  A$led$183                          led
+     000080D8  A$led$185                          led
+     000080DC  A$led$186                          led
+     000080DD  A$led$189                          led
+     000080E1  A$led$190                          led
+     000080E3  A$led$191                          led
+     000080E4  A$led$192                          led
+     000080E6  A$led$195                          led
+     000080E8  A$led$198                          led
+     000080EB  A$led$199                          led
+     000080EC  A$led$201                          led
+     000080EE  A$led$208                          led
+     000080EE  C$led.c$43$1$4                     led
+     000080EE  XG$main$0$0                        led
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 7.
 
@@ -155,6 +176,5 @@ User Base Address Definitions
 
 HOME = 0x8000
 DATA = 0x0001
-SSEG = 0xffffffff
 
 
