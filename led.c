@@ -13,7 +13,7 @@
 #define PD_ODR		(*(volatile uint8_t *)0x500f)
 #define PD_DDR		(*(volatile uint8_t *)0x5011)
 #define PD_CR1		(*(volatile uint8_t *)0x5012)
-
+#define thousand 1000
 
 unsigned int
 clock (void)
@@ -32,16 +32,20 @@ main (void)
   // 1000 ticks per second
   TIM1_PSCRH = 0x3e;
   TIM1_PSCRL = 0x80;
+//  vol (uint16_t) testInt = 1000;
+  unsigned long testInt = thousand;
   // Enable timer
   TIM1_CR1 = 0x01;
 
   PD_DDR = 0x01;
   PD_CR1 = 0x01;    // which register is this
-
+      testInt ++;
+ //     testInt +=3;
   for (;;) // infinite loop
+ //     testInt ++;
   // maybe read the target variable with a numeric zero 
   // then select alternative to 0
-    PD_ODR = 0x2 |clock () % 1000 < 100;	//  was     PD_ODR = clock () % 1000 < 500;
+    PD_ODR = 0x2 |clock () % 1000 < 500;	//  was     PD_ODR = clock () % 1000 < 500;
     PD_ODR = PD_ODR | 0x2;  // set same value on another pin
-    
+
 }
