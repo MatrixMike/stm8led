@@ -41,7 +41,7 @@ Symbol Table
   8 A$led$198                                                      000048 GR
   8 A$led$199                                                      00004B GR
   8 A$led$201                                                      00004C GR
-  8 A$led$208                                                      00004E GR
+  8 A$led$209                                                      00004E GR
   5 A$led$38                                                       000000 GR
   5 A$led$39                                                       000004 GR
   5 A$led$40                                                       000008 GR
@@ -92,7 +92,7 @@ Symbol Table
   6 A$led$93                                                       000018 GR
   7 A$led$97                                                       000000 GR
   8 C$led.c$24$1$2                                              =  00001C GR
-  8 C$led.c$43$1$4                                              =  00004E GR
+  8 C$led.c$47$1$4                                              =  00004E GR
   8 XG$clock$0$0                                                =  00001C GR
   8 XG$main$0$0                                                 =  00004E GR
   5 __interrupt_vect                                               000000 R

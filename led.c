@@ -36,8 +36,12 @@ main (void)
   TIM1_CR1 = 0x01;
 
   PD_DDR = 0x01;
-  PD_CR1 = 0x01;
+  PD_CR1 = 0x01;    // which register is this
 
-  for (;;)
+  for (;;) // infinite loop
+  // maybe read the target variable with a numeric zero 
+  // then select alternative to 0
     PD_ODR = clock () % 1000 < 100;	//  was     PD_ODR = clock () % 1000 < 500;
+    PD_ODR = PD_ODR | 0x2;  // set same value on another pin
+    
 }

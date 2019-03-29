@@ -78,12 +78,12 @@ S A$led$152 Def00001C
 S A$led$143 Def000017
 S A$led$144 Def000019
 S A$led$135 Def00000E
-S A$led$208 Def00004E
 S A$led$190 Def000041
 S A$led$172 Def000029
 S A$led$163 Def00001D
 S A$led$127 Def000008
 S A$led$118 Def000000
+S A$led$209 Def00004E
 S A$led$191 Def000043
 S A$led$128 Def00000B
 S A$led$192 Def000044
@@ -101,7 +101,7 @@ S A$led$198 Def000048
 S A$led$189 Def00003D
 S A$led$199 Def00004B
 S C$led.c$24$1$2 Def00001C
-S C$led.c$43$1$4 Def00004E
+S C$led.c$47$1$4 Def00004E
 S _clock Def000000
 S XG$clock$0$0 Def00001C
 A INITIALIZER size 0 flags 0 addr 0

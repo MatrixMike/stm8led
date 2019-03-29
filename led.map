@@ -160,8 +160,8 @@ CODE                                000080A0    0000004F =          79. bytes (R
      000080E8  A$led$198                          led
      000080EB  A$led$199                          led
      000080EC  A$led$201                          led
-     000080EE  A$led$208                          led
-     000080EE  C$led.c$43$1$4                     led
+     000080EE  A$led$209                          led
+     000080EE  C$led.c$47$1$4                     led
      000080EE  XG$main$0$0                        led
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 7.

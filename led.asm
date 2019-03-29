@@ -1,7 +1,7 @@
 ;--------------------------------------------------------
 ; File Created by SDCC : free open source ANSI-C Compiler
 ; Version 3.5.0 #9253 (Mar 24 2016) (Linux)
-; This file was generated Mon Mar 11 18:17:25 2019
+; This file was generated Fri Mar 29 14:30:56 2019
 ;--------------------------------------------------------
 	.module led
 	.optsdcc -mstm8
@@ -173,12 +173,12 @@ _main:
 ;	led.c: 38: PD_DDR = 0x01;
 ; genPointerSet
 	mov	0x5011+0, #0x01
-;	led.c: 39: PD_CR1 = 0x01;
+;	led.c: 39: PD_CR1 = 0x01;    // which register is this
 ; genPointerSet
 	mov	0x5012+0, #0x01
 ; genLabel
 00102$:
-;	led.c: 42: PD_ODR = clock () % 1000 < 100;	//  was     PD_ODR = clock () % 1000 < 500;
+;	led.c: 44: PD_ODR = clock () % 1000 < 100;	//  was     PD_ODR = clock () % 1000 < 500;
 ; genCall
 	call	_clock
 ; genDivMod
@@ -200,10 +200,11 @@ _main:
 ; genGoto
 	jra	00102$
 ; peephole j5 changed absolute to relative unconditional jump.
+;	led.c: 45: PD_ODR = PD_ODR | 0x2;  // set same value on another pin
 ; genLabel
 ; peephole j30 removed unused label 00104$.
 ; genEndFunction
-	C$led.c$43$1$4 ==.
+	C$led.c$47$1$4 ==.
 	XG$main$0$0 ==.
 	ret
 	.area CODE

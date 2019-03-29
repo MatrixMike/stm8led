@@ -1,7 +1,7 @@
                                       1 ;--------------------------------------------------------
                                       2 ; File Created by SDCC : free open source ANSI-C Compiler
                                       3 ; Version 3.5.0 #9253 (Mar 24 2016) (Linux)
-                                      4 ; This file was generated Mon Mar 11 18:17:25 2019
+                                      4 ; This file was generated Fri Mar 29 14:30:56 2019
                                       5 ;--------------------------------------------------------
                                       6 	.module led
                                       7 	.optsdcc -mstm8
@@ -173,12 +173,12 @@
                                     173 ;	led.c: 38: PD_DDR = 0x01;
                                     174 ; genPointerSet
       00002D 35 01 50 11      [ 1]  175 	mov	0x5011+0, #0x01
-                                    176 ;	led.c: 39: PD_CR1 = 0x01;
+                                    176 ;	led.c: 39: PD_CR1 = 0x01;    // which register is this
                                     177 ; genPointerSet
       000031 35 01 50 12      [ 1]  178 	mov	0x5012+0, #0x01
                                     179 ; genLabel
       000035                        180 00102$:
-                                    181 ;	led.c: 42: PD_ODR = clock () % 1000 < 100;	//  was     PD_ODR = clock () % 1000 < 500;
+                                    181 ;	led.c: 44: PD_ODR = clock () % 1000 < 100;	//  was     PD_ODR = clock () % 1000 < 500;
                                     182 ; genCall
       000035 CDr00r00         [ 4]  183 	call	_clock
                                     184 ; genDivMod
@@ -200,12 +200,13 @@
                                     200 ; genGoto
       00004C 20 E7            [ 2]  201 	jra	00102$
                                     202 ; peephole j5 changed absolute to relative unconditional jump.
-                                    203 ; genLabel
-                                    204 ; peephole j30 removed unused label 00104$.
-                                    205 ; genEndFunction
-                           00004E   206 	C$led.c$43$1$4 ==.
-                           00004E   207 	XG$main$0$0 ==.
-      00004E 81               [ 4]  208 	ret
-                                    209 	.area CODE
-                                    210 	.area INITIALIZER
-                                    211 	.area CABS (ABS)
+                                    203 ;	led.c: 45: PD_ODR = PD_ODR | 0x2;  // set same value on another pin
+                                    204 ; genLabel
+                                    205 ; peephole j30 removed unused label 00104$.
+                                    206 ; genEndFunction
+                           00004E   207 	C$led.c$47$1$4 ==.
+                           00004E   208 	XG$main$0$0 ==.
+      00004E 81               [ 4]  209 	ret
+                                    210 	.area CODE
+                                    211 	.area INITIALIZER
+                                    212 	.area CABS (ABS)
