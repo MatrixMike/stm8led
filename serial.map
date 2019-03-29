@@ -1,0 +1,197 @@
+ASxxxx Linker V03.00 + NoICE + sdld,  page 1.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000000  .__.ABS.                           _strlen
+     00000000  _putchar                        
+     00000000  l_CABS                          
+     00000000  l_DABS                          
+     00000000  l_DATA                          
+     00000000  l_INITIALIZED                   
+     00000000  l_INITIALIZER                   
+     00000000  l__CODE                         
+     00000000  s_CABS                          
+     00000000  s_DABS                          
+     00000000  s__CODE                         
+     00000001  l_SSEG                          
+     00000001  s_DATA                          
+     00000001  s_INITIALIZED                   
+     00000001  s_SSEG                          
+     00000003  l_GSFINAL                       
+     0000001A  l_GSINIT                        
+     00000083  l_HOME                          
+     000007A0  l_CODE                          
+     00008000  s_HOME                          
+     00008083  s_GSINIT                        
+     0000809D  s_GSFINAL                       
+     000080A0  s_CODE                          
+     00008840  s_INITIALIZER                   
+ASxxxx Linker V03.00 + NoICE + sdld,  page 2.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+SSEG                                00000001    00000001 =           1. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 3.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+HOME                                00008000    00000083 =         131. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00008000  A$serial$38                        serial
+     00008004  A$serial$39                        serial
+     00008008  A$serial$40                        serial
+     0000800C  A$serial$41                        serial
+     00008010  A$serial$42                        serial
+     00008014  A$serial$43                        serial
+     00008018  A$serial$44                        serial
+     0000801C  A$serial$45                        serial
+     00008020  A$serial$46                        serial
+     00008024  A$serial$47                        serial
+     00008028  A$serial$48                        serial
+     0000802C  A$serial$49                        serial
+     00008030  A$serial$50                        serial
+     00008034  A$serial$51                        serial
+     00008038  A$serial$52                        serial
+     0000803C  A$serial$53                        serial
+     00008040  A$serial$54                        serial
+     00008044  A$serial$55                        serial
+     00008048  A$serial$56                        serial
+     0000804C  A$serial$57                        serial
+     00008050  A$serial$58                        serial
+     00008054  A$serial$59                        serial
+     00008058  A$serial$60                        serial
+     0000805C  A$serial$61                        serial
+     00008060  A$serial$62                        serial
+     00008064  A$serial$63                        serial
+     00008068  A$serial$64                        serial
+     0000806C  A$serial$65                        serial
+     00008070  A$serial$66                        serial
+     00008074  A$serial$67                        serial
+     00008078  A$serial$68                        serial
+     0000807C  A$serial$69                        serial
+     00008080  A$serial$104                       serial
+ASxxxx Linker V03.00 + NoICE + sdld,  page 4.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT                              00008083    0000001A =          26. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00008083  A$serial$80                        serial
+     00008086  A$serial$81                        serial
+     00008088  A$serial$83                        serial
+     0000808C  A$serial$84                        serial
+     0000808D  A$serial$85                        serial
+     0000808F  A$serial$87                        serial
+     00008092  A$serial$88                        serial
+     00008094  A$serial$90                        serial
+     00008097  A$serial$91                        serial
+     0000809A  A$serial$92                        serial
+     0000809B  A$serial$93                        serial
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 5.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSFINAL                             0000809D    00000003 =           3. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000809D  A$serial$97                        serial
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 6.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CODE                                000080A0    000007A0 =        1952. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000080A0  A$serial$118                       serial
+     000080A0  _main                              serial
+     000080A2  A$serial$121                       serial
+     000080A6  A$serial$124                       serial
+     000080AA  A$serial$127                       serial
+     000080AE  A$serial$130                       serial
+     000080B2  A$serial$133                       serial
+     000080B6  A$serial$140                       serial
+     000080B9  A$serial$141                       serial
+     000080BA  A$serial$142                       serial
+     000080BC  A$serial$144                       serial
+     000080BD  A$serial$147                       serial
+     000080C1  A$serial$149                       serial
+     000080C5  A$serial$154                       serial
+     000080C8  A$serial$158                       serial
+     000080C9  A$serial$160                       serial
+     000080CC  A$serial$161                       serial
+     000080CE  A$serial$164                       serial
+     000080D1  A$serial$165                       serial
+     000080D3  A$serial$166                       serial
+     000080D5  A$serial$167                       serial
+     000080D7  A$serial$171                       serial
+     000080D9  A$serial$172                       serial
+     000080DC  A$serial$173                       serial
+     000080DE  A$serial$174                       serial
+     000080E0  A$serial$175                       serial
+     000080E1  A$serial$176                       serial
+     000080E3  A$serial$177                       serial
+     000080E5  A$serial$178                       serial
+     000080E6  A$serial$180                       serial
+     000080E7  A$serial$181                       serial
+     000080E9  A$serial$182                       serial
+     000080EA  A$serial$183                       serial
+     000080EC  A$serial$184                       serial
+     000080EE  A$serial$185                       serial
+     000080EF  A$serial$187                       serial
+     000080F1  A$serial$188                       serial
+     000080F3  A$serial$190                       serial
+     000080F4  A$serial$191                       serial
+     000080F6  A$serial$197                       serial
+     000080F8  A$serial$203                       serial
+     000080FA  A$serial$206                       serial
+     000080FA  C$serial.c$49$1$13                 serial
+     000080FA  XG$main$0$0                        serial
+     000080FB  Fserial$__str_0$0$0                serial
+     00008111  _vprintf                           vprintf
+     00008123  _printf                            vprintf
+     000081E4  __print_format                     printf_large
+     00008832  _strlen                            _strlen
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 7.
+
+Files Linked                              [ module(s) ]
+
+serial.rel                                [ serial ]
+
+
+Libraries Linked                          [ object file ]
+
+/usr/bin/../share/sdcc/lib/stm8/stm8.lib  [ vprintf.rel ]
+/usr/bin/../share/sdcc/lib/stm8/stm8.lib  [ printf_large.rel ]
+/usr/bin/../share/sdcc/lib/stm8/stm8.lib  [ _strlen.rel ]
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 8.
+
+User Base Address Definitions
+
+HOME = 0x8000
+DATA = 0x0001
+
+
+?ASlink-Warning-Undefined Global '_putchar' referenced by module 'vprintf'

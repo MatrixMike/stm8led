@@ -23,13 +23,13 @@ Area                                    Addr        Size        Decimal Bytes (A
      00000001  s_SSEG                          
      00000003  l_GSFINAL                       
      0000001A  l_GSINIT                        
-     0000004F  l_CODE                          
+     00000051  l_CODE                          
      00000083  l_HOME                          
      00008000  s_HOME                          
      00008083  s_GSINIT                        
      0000809D  s_GSFINAL                       
      000080A0  s_CODE                          
-     000080EF  s_INITIALIZER                   
+     000080F1  s_INITIALIZER                   
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 2.
 Hexadecimal  [32-Bits]
@@ -119,7 +119,7 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CODE                                000080A0    0000004F =          79. bytes (REL,CON)
+CODE                                000080A0    00000051 =          81. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -158,11 +158,12 @@ CODE                                000080A0    0000004F =          79. bytes (R
      000080E4  A$led$192                          led
      000080E6  A$led$195                          led
      000080E8  A$led$198                          led
-     000080EB  A$led$199                          led
-     000080EC  A$led$201                          led
-     000080EE  A$led$209                          led
-     000080EE  C$led.c$47$1$4                     led
-     000080EE  XG$main$0$0                        led
+     000080EA  A$led$200                          led
+     000080ED  A$led$201                          led
+     000080EE  A$led$203                          led
+     000080F0  A$led$211                          led
+     000080F0  C$led.c$47$1$4                     led
+     000080F0  XG$main$0$0                        led
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 7.
 

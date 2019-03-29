@@ -39,9 +39,10 @@ Symbol Table
   8 A$led$192                                                      000044 GR
   8 A$led$195                                                      000046 GR
   8 A$led$198                                                      000048 GR
-  8 A$led$199                                                      00004B GR
-  8 A$led$201                                                      00004C GR
-  8 A$led$209                                                      00004E GR
+  8 A$led$200                                                      00004A GR
+  8 A$led$201                                                      00004D GR
+  8 A$led$203                                                      00004E GR
+  8 A$led$211                                                      000050 GR
   5 A$led$38                                                       000000 GR
   5 A$led$39                                                       000004 GR
   5 A$led$40                                                       000008 GR
@@ -57,12 +58,12 @@ Symbol Table
   5 A$led$50                                                       000030 GR
   5 A$led$51                                                       000034 GR
   5 A$led$52                                                       000038 GR
-  5 A$led$53                                                       00003C GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (STMicroelectronics STM8), page 2.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
+  5 A$led$53                                                       00003C GR
   5 A$led$54                                                       000040 GR
   5 A$led$55                                                       000044 GR
   5 A$led$56                                                       000048 GR
@@ -92,9 +93,9 @@ Symbol Table
   6 A$led$93                                                       000018 GR
   7 A$led$97                                                       000000 GR
   8 C$led.c$24$1$2                                              =  00001C GR
-  8 C$led.c$47$1$4                                              =  00004E GR
+  8 C$led.c$47$1$4                                              =  000050 GR
   8 XG$clock$0$0                                                =  00001C GR
-  8 XG$main$0$0                                                 =  00004E GR
+  8 XG$main$0$0                                                 =  000050 GR
   5 __interrupt_vect                                               000000 R
   6 __sdcc_gs_init_startup                                         000000 R
   6 __sdcc_init_data                                               000000 R
@@ -123,7 +124,7 @@ Area Table
    5 HOME                                       size     83   flags    0
    6 GSINIT                                     size     1A   flags    0
    7 GSFINAL                                    size      3   flags    0
-   8 CODE                                       size     4F   flags    0
+   8 CODE                                       size     51   flags    0
    9 INITIALIZER                                size      0   flags    0
    A CABS                                       size      0   flags    8
 

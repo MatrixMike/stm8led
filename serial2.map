@@ -1,0 +1,180 @@
+ASxxxx Linker V03.00 + NoICE + sdld,  page 1.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000000  .__.ABS.                           serial2
+     00000000  l_CABS                          
+     00000000  l_DABS                          
+     00000000  l_DATA                          
+     00000000  l_INITIALIZED                   
+     00000000  l_INITIALIZER                   
+     00000000  l__CODE                         
+     00000000  s_CABS                          
+     00000000  s_DABS                          
+     00000000  s__CODE                         
+     00000001  l_SSEG                          
+     00000001  s_DATA                          
+     00000001  s_INITIALIZED                   
+     00000001  s_SSEG                          
+     00000003  l_GSFINAL                       
+     0000001A  l_GSINIT                        
+     00000052  l_CODE                          
+     00000083  l_HOME                          
+     00008000  s_HOME                          
+     00008083  s_GSINIT                        
+     0000809D  s_GSFINAL                       
+     000080A0  s_CODE                          
+     000080F2  s_INITIALIZER                   
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 2.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+SSEG                                00000001    00000001 =           1. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 3.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+HOME                                00008000    00000083 =         131. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00008000  A$serial2$37                       serial2
+     00008004  A$serial2$38                       serial2
+     00008008  A$serial2$39                       serial2
+     0000800C  A$serial2$40                       serial2
+     00008010  A$serial2$41                       serial2
+     00008014  A$serial2$42                       serial2
+     00008018  A$serial2$43                       serial2
+     0000801C  A$serial2$44                       serial2
+     00008020  A$serial2$45                       serial2
+     00008024  A$serial2$46                       serial2
+     00008028  A$serial2$47                       serial2
+     0000802C  A$serial2$48                       serial2
+     00008030  A$serial2$49                       serial2
+     00008034  A$serial2$50                       serial2
+     00008038  A$serial2$51                       serial2
+     0000803C  A$serial2$52                       serial2
+     00008040  A$serial2$53                       serial2
+     00008044  A$serial2$54                       serial2
+     00008048  A$serial2$55                       serial2
+     0000804C  A$serial2$56                       serial2
+     00008050  A$serial2$57                       serial2
+     00008054  A$serial2$58                       serial2
+     00008058  A$serial2$59                       serial2
+     0000805C  A$serial2$60                       serial2
+     00008060  A$serial2$61                       serial2
+     00008064  A$serial2$62                       serial2
+     00008068  A$serial2$63                       serial2
+     0000806C  A$serial2$64                       serial2
+     00008070  A$serial2$65                       serial2
+     00008074  A$serial2$66                       serial2
+     00008078  A$serial2$67                       serial2
+     0000807C  A$serial2$68                       serial2
+     00008080  A$serial2$103                      serial2
+ASxxxx Linker V03.00 + NoICE + sdld,  page 4.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT                              00008083    0000001A =          26. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00008083  A$serial2$79                       serial2
+     00008086  A$serial2$80                       serial2
+     00008088  A$serial2$82                       serial2
+     0000808C  A$serial2$83                       serial2
+     0000808D  A$serial2$84                       serial2
+     0000808F  A$serial2$86                       serial2
+     00008092  A$serial2$87                       serial2
+     00008094  A$serial2$89                       serial2
+     00008097  A$serial2$90                       serial2
+     0000809A  A$serial2$91                       serial2
+     0000809B  A$serial2$92                       serial2
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 5.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSFINAL                             0000809D    00000003 =           3. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000809D  A$serial2$96                       serial2
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 6.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CODE                                000080A0    00000052 =          82. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000080A0  A$serial2$117                      serial2
+     000080A0  _main                              serial2
+     000080A2  A$serial2$120                      serial2
+     000080A6  A$serial2$123                      serial2
+     000080AA  A$serial2$126                      serial2
+     000080AE  A$serial2$129                      serial2
+     000080B2  A$serial2$132                      serial2
+     000080B6  A$serial2$139                      serial2
+     000080B9  A$serial2$140                      serial2
+     000080BA  A$serial2$141                      serial2
+     000080BC  A$serial2$143                      serial2
+     000080BD  A$serial2$146                      serial2
+     000080C1  A$serial2$148                      serial2
+     000080C5  A$serial2$153                      serial2
+     000080C8  A$serial2$154                      serial2
+     000080CA  A$serial2$155                      serial2
+     000080CC  A$serial2$156                      serial2
+     000080CE  A$serial2$160                      serial2
+     000080D0  A$serial2$161                      serial2
+     000080D3  A$serial2$162                      serial2
+     000080D5  A$serial2$163                      serial2
+     000080D7  A$serial2$164                      serial2
+     000080D8  A$serial2$165                      serial2
+     000080DA  A$serial2$166                      serial2
+     000080DC  A$serial2$167                      serial2
+     000080DD  A$serial2$169                      serial2
+     000080DE  A$serial2$170                      serial2
+     000080E0  A$serial2$171                      serial2
+     000080E1  A$serial2$172                      serial2
+     000080E3  A$serial2$173                      serial2
+     000080E5  A$serial2$174                      serial2
+     000080E6  A$serial2$176                      serial2
+     000080E8  A$serial2$177                      serial2
+     000080EA  A$serial2$179                      serial2
+     000080EB  A$serial2$180                      serial2
+     000080ED  A$serial2$186                      serial2
+     000080EF  A$serial2$192                      serial2
+     000080F1  A$serial2$195                      serial2
+     000080F1  C$serial2.c$49$1$13                serial2
+     000080F1  XG$main$0$0                        serial2
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 7.
+
+Files Linked                              [ module(s) ]
+
+serial2.rel                               [ serial2 ]
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 8.
+
+User Base Address Definitions
+
+HOME = 0x8000
+DATA = 0x0001
+
+

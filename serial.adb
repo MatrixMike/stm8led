@@ -1,0 +1,15 @@
+M:serial
+S:Lserial.main$i$1$13({4}SL:U),B,1,-8
+S:Lserial.main$sloc0$1$0({4}SL:U),B,1,-4
+S:G$_print_format$0$0({2}DF,SI:S),C,0,0
+S:G$printf_small$0$0({2}DF,SV:S),C,0,0
+S:G$printf$0$0({2}DF,SI:S),C,0,0
+S:G$vprintf$0$0({2}DF,SI:S),C,0,0
+S:G$sprintf$0$0({2}DF,SI:S),C,0,0
+S:G$vsprintf$0$0({2}DF,SI:S),C,0,0
+S:G$puts$0$0({2}DF,SI:S),C,0,0
+S:G$gets$0$0({2}DF,DG,SC:S),C,0,0
+S:G$getchar$0$0({2}DF,SC:S),C,0,0
+S:G$putchar$0$0({2}DF,SV:S),C,0,0
+S:G$main$0$0({2}DF,SV:S),C,0,4
+S:Fserial$__str_0$0$0({14}DA14d,SC:S),D,0,0

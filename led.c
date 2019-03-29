@@ -41,7 +41,7 @@ main (void)
   for (;;) // infinite loop
   // maybe read the target variable with a numeric zero 
   // then select alternative to 0
-    PD_ODR = clock () % 1000 < 100;	//  was     PD_ODR = clock () % 1000 < 500;
+    PD_ODR = 0x2 |clock () % 1000 < 100;	//  was     PD_ODR = clock () % 1000 < 500;
     PD_ODR = PD_ODR | 0x2;  // set same value on another pin
     
 }

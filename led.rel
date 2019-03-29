@@ -1,6 +1,6 @@
 ;!FILE led.asm
 XH3
-H B areas 5C global symbols
+H B areas 5D global symbols
 M led
 O -mstm8
 S s_INITIALIZED Ref000000
@@ -63,11 +63,14 @@ S A$led$87 Def00000C
 S A$led$88 Def00000F
 A GSFINAL size 3 flags 0 addr 0
 S A$led$97 Def000000
-A CODE size 4F flags 0 addr 0
+A CODE size 51 flags 0 addr 0
 S _main Def00001D
-S XG$main$0$0 Def00004E
-S A$led$201 Def00004C
+S A$led$200 Def00004A
+S XG$main$0$0 Def000050
+S A$led$201 Def00004D
+S A$led$211 Def000050
 S A$led$121 Def000002
+S A$led$203 Def00004E
 S A$led$140 Def000012
 S A$led$122 Def000005
 S A$led$141 Def000014
@@ -83,7 +86,6 @@ S A$led$172 Def000029
 S A$led$163 Def00001D
 S A$led$127 Def000008
 S A$led$118 Def000000
-S A$led$209 Def00004E
 S A$led$191 Def000043
 S A$led$128 Def00000B
 S A$led$192 Def000044
@@ -99,9 +101,8 @@ S A$led$178 Def000031
 S A$led$169 Def000025
 S A$led$198 Def000048
 S A$led$189 Def00003D
-S A$led$199 Def00004B
 S C$led.c$24$1$2 Def00001C
-S C$led.c$47$1$4 Def00004E
+S C$led.c$47$1$4 Def000050
 S _clock Def000000
 S XG$clock$0$0 Def00001C
 A INITIALIZER size 0 flags 0 addr 0
@@ -186,5 +187,5 @@ T 00 00 46 A6 01
 R 00 00 00 08
 T 00 00 48
 R 00 00 00 08
-T 00 00 48 AE 50 0F F7 20 E7 81
+T 00 00 48 AA 02 AE 50 0F F7 20 E5 81
 R 00 00 00 08

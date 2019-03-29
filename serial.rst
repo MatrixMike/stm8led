@@ -1,16 +1,16 @@
                                       1 ;--------------------------------------------------------
                                       2 ; File Created by SDCC : free open source ANSI-C Compiler
                                       3 ; Version 3.5.0 #9253 (Mar 24 2016) (Linux)
-                                      4 ; This file was generated Fri Mar 29 15:47:21 2019
+                                      4 ; This file was generated Fri Mar 29 15:47:22 2019
                                       5 ;--------------------------------------------------------
-                                      6 	.module led
+                                      6 	.module serial
                                       7 	.optsdcc -mstm8
                                       8 	
                                       9 ;--------------------------------------------------------
                                      10 ; Public variables in this module
                                      11 ;--------------------------------------------------------
                                      12 	.globl _main
-                                     13 	.globl _clock
+                                     13 	.globl _printf
                                      14 ;--------------------------------------------------------
                                      15 ; ram data
                                      16 ;--------------------------------------------------------
@@ -87,7 +87,7 @@
       00808F AE 00 00         [ 2]   87 	ldw	x, #l_INITIALIZER
       008092 27 09            [ 1]   88 	jreq	00004$
       008094                         89 00003$:
-      008094 D6 80 F0         [ 1]   90 	ld	a, (s_INITIALIZER - 1, x)
+      008094 D6 88 3F         [ 1]   90 	ld	a, (s_INITIALIZER - 1, x)
       008097 D7 00 00         [ 1]   91 	ld	(s_INITIALIZED - 1, x), a
       00809A 5A               [ 2]   92 	decw	x
       00809B 26 F7            [ 1]   93 	jrne	00003$
@@ -101,114 +101,115 @@
                                     101 	.area HOME
                                     102 	.area HOME
       008080                        103 __sdcc_program_startup:
-      008080 CC 80 BD         [ 2]  104 	jp	_main
+      008080 CC 80 A0         [ 2]  104 	jp	_main
                                     105 ;	return from main will return to caller
                                     106 ;--------------------------------------------------------
                                     107 ; code
                                     108 ;--------------------------------------------------------
                                     109 	.area CODE
-                                    110 ;	led.c: 19: clock (void)
+                                    110 ;	serial.c: 30: void main(void)
                                     111 ; genLabel
                                     112 ;	-----------------------------------------
-                                    113 ;	 function clock
+                                    113 ;	 function main
                                     114 ;	-----------------------------------------
                                     115 ;	Register assignment might be sub-optimal.
-                                    116 ;	Stack space usage: 6 bytes.
-      0080A0                        117 _clock:
-      0080A0 52 06            [ 2]  118 	sub	sp, #6
-                                    119 ;	led.c: 21: unsigned char h = TIM1_CNTRH;
-                                    120 ; genPointerGet
-      0080A2 AE 52 5E         [ 2]  121 	ldw	x, #0x525e
-      0080A5 F6               [ 1]  122 	ld	a, (x)
-      0080A6 90 95            [ 1]  123 	ld	yh, a
-                                    124 ; genAssign
-                                    125 ;	led.c: 22: unsigned char l = TIM1_CNTRL;
-                                    126 ; genPointerGet
-      0080A8 AE 52 5F         [ 2]  127 	ldw	x, #0x525f
-      0080AB F6               [ 1]  128 	ld	a, (x)
-                                    129 ; genAssign
-                                    130 ;	led.c: 23: return ((unsigned int) (h) << 8 | l);
-                                    131 ; genCast
-                                    132 ; genAssign
-      0080AC 0F 01            [ 1]  133 	clr	(0x01, sp)
-                                    134 ; genLeftShiftLiteral
-      0080AE 0F 06            [ 1]  135 	clr	(0x06, sp)
+                                    116 ;	Stack space usage: 8 bytes.
+      0080A0                        117 _main:
+      0080A0 52 08            [ 2]  118 	sub	sp, #8
+                                    119 ;	serial.c: 34: CLK_DIVR = 0x00; // Set the frequency to 16 MHz
+                                    120 ; genPointerSet
+      0080A2 35 00 50 C0      [ 1]  121 	mov	0x50c0+0, #0x00
+                                    122 ;	serial.c: 35: CLK_PCKENR1 = 0xFF; // Enable peripherals
+                                    123 ; genPointerSet
+      0080A6 35 FF 50 C3      [ 1]  124 	mov	0x50c3+0, #0xff
+                                    125 ;	serial.c: 37: PC_DDR = 0x08; // Put TX line on
+                                    126 ; genPointerSet
+      0080AA 35 08 50 0C      [ 1]  127 	mov	0x500c+0, #0x08
+                                    128 ;	serial.c: 38: PC_CR1 = 0x08;
+                                    129 ; genPointerSet
+      0080AE 35 08 50 0D      [ 1]  130 	mov	0x500d+0, #0x08
+                                    131 ;	serial.c: 40: USART1_CR2 = USART_CR2_TEN; // Allow TX and RX
+                                    132 ; genPointerSet
+      0080B2 35 08 52 35      [ 1]  133 	mov	0x5235+0, #0x08
+                                    134 ;	serial.c: 41: USART1_CR3 &= ~(USART_CR3_STOP1 | USART_CR3_STOP2); // 1 stop bit
+                                    135 ; genPointerGet
                                     136 ; genCast
                                     137 ; genAssign
-      0080B0 0F 03            [ 1]  138 	clr	(0x03, sp)
-                                    139 ; genOr
-      0080B2 1A 06            [ 1]  140 	or	a, (0x06, sp)
-      0080B4 97               [ 1]  141 	ld	xl, a
-      0080B5 90 9E            [ 1]  142 	ld	a, yh
-      0080B7 1A 03            [ 1]  143 	or	a, (0x03, sp)
-      0080B9 95               [ 1]  144 	ld	xh, a
-                                    145 ; genReturn
-                                    146 ; genLabel
-                                    147 ; peephole j30 removed unused label 00101$.
-                                    148 ; genEndFunction
-      0080BA 5B 06            [ 2]  149 	addw	sp, #6
-                           00001C   150 	C$led.c$24$1$2 ==.
-                           00001C   151 	XG$clock$0$0 ==.
-      0080BC 81               [ 4]  152 	ret
-                                    153 ;	led.c: 27: main (void)
-                                    154 ; genLabel
-                                    155 ;	-----------------------------------------
-                                    156 ;	 function main
-                                    157 ;	-----------------------------------------
-                                    158 ;	Register assignment might be sub-optimal.
-                                    159 ;	Stack space usage: 0 bytes.
-      0080BD                        160 _main:
-                                    161 ;	led.c: 29: CLK_DIVR = 0x00;		// Set the frequency to 16 MHz
-                                    162 ; genPointerSet
-      0080BD 35 00 50 C6      [ 1]  163 	mov	0x50c6+0, #0x00
-                                    164 ;	led.c: 33: TIM1_PSCRH = 0x3e;
-                                    165 ; genPointerSet
-      0080C1 35 3E 52 60      [ 1]  166 	mov	0x5260+0, #0x3e
-                                    167 ;	led.c: 34: TIM1_PSCRL = 0x80;
-                                    168 ; genPointerSet
-      0080C5 35 80 52 61      [ 1]  169 	mov	0x5261+0, #0x80
-                                    170 ;	led.c: 36: TIM1_CR1 = 0x01;
-                                    171 ; genPointerSet
-      0080C9 35 01 52 50      [ 1]  172 	mov	0x5250+0, #0x01
-                                    173 ;	led.c: 38: PD_DDR = 0x01;
-                                    174 ; genPointerSet
-      0080CD 35 01 50 11      [ 1]  175 	mov	0x5011+0, #0x01
-                                    176 ;	led.c: 39: PD_CR1 = 0x01;    // which register is this
-                                    177 ; genPointerSet
-      0080D1 35 01 50 12      [ 1]  178 	mov	0x5012+0, #0x01
-                                    179 ; genLabel
-      0080D5                        180 00102$:
-                                    181 ;	led.c: 44: PD_ODR = 0x2 |clock () % 1000 < 100;	//  was     PD_ODR = clock () % 1000 < 500;
-                                    182 ; genCall
-      0080D5 CD 80 A0         [ 4]  183 	call	_clock
-                                    184 ; genDivMod
-      0080D8 90 AE 03 E8      [ 2]  185 	ldw	y, #0x03e8
-      0080DC 65               [ 2]  186 	divw	x, y
-                                    187 ; genCmp
-                                    188 ; genCmpTop
-      0080DD 90 A3 00 64      [ 2]  189 	cpw	y, #0x0064
-      0080E1 25 03            [ 1]  190 	jrc	00110$
-      0080E3 4F               [ 1]  191 	clr	a
-      0080E4 20 02            [ 2]  192 	jra	00111$
-                                    193 ; peephole j5 changed absolute to relative unconditional jump.
-      0080E6                        194 00110$:
-      0080E6 A6 01            [ 1]  195 	ld	a, #0x01
-      0080E8                        196 00111$:
-                                    197 ; genOr
-      0080E8 AA 02            [ 1]  198 	or	a, #0x02
-                                    199 ; genPointerSet
-      0080EA AE 50 0F         [ 2]  200 	ldw	x, #0x500f
-      0080ED F7               [ 1]  201 	ld	(x), a
-                                    202 ; genGoto
-      0080EE 20 E5            [ 2]  203 	jra	00102$
-                                    204 ; peephole j5 changed absolute to relative unconditional jump.
-                                    205 ;	led.c: 45: PD_ODR = PD_ODR | 0x2;  // set same value on another pin
-                                    206 ; genLabel
-                                    207 ; peephole j30 removed unused label 00104$.
-                                    208 ; genEndFunction
-                           000050   209 	C$led.c$47$1$4 ==.
-                           000050   210 	XG$main$0$0 ==.
-      0080F0 81               [ 4]  211 	ret
-                                    212 	.area CODE
+                                    138 ; genAnd
+                                    139 ; genPointerSet
+      0080B6 AE 52 36         [ 2]  140 	ldw	x, #0x5236
+      0080B9 F6               [ 1]  141 	ld	a, (x)
+      0080BA A4 CF            [ 1]  142 	and	a, #0xcf
+                                    143 ; peephole 10 removed redundant load of #0x5236 into x
+      0080BC F7               [ 1]  144 	ld	(x), a
+                                    145 ;	serial.c: 42: USART1_BRR2 = 0x03; USART1_BRR1 = 0x68; // 9600 baud
+                                    146 ; genPointerSet
+      0080BD 35 03 52 33      [ 1]  147 	mov	0x5233+0, #0x03
+                                    148 ; genPointerSet
+      0080C1 35 68 52 32      [ 1]  149 	mov	0x5232+0, #0x68
+                                    150 ; genLabel
+      0080C5                        151 00106$:
+                                    152 ;	serial.c: 46: printf("Hello World!\n");
+                                    153 ; genAddrOf
+      0080C5 AE 80 FB         [ 2]  154 	ldw	x, #___str_0+0
+                                    155 ; genCast
+                                    156 ; genAssign
+                                    157 ; genIPush
+      0080C8 89               [ 2]  158 	pushw	x
+                                    159 ; genCall
+      0080C9 CD 81 23         [ 4]  160 	call	_printf
+      0080CC 5B 02            [ 2]  161 	addw	sp, #2
+                                    162 ;	serial.c: 47: for(i = 0; i < 147456; i++); // Sleep
+                                    163 ; genAssign
+      0080CE AE 40 00         [ 2]  164 	ldw	x, #0x4000
+      0080D1 1F 03            [ 2]  165 	ldw	(0x03, sp), x
+      0080D3 A6 02            [ 1]  166 	ld	a, #0x02
+      0080D5 0F 01            [ 1]  167 	clr	(0x01, sp)
+                                    168 ; genLabel
+      0080D7                        169 00105$:
+                                    170 ; genMinus
+      0080D7 1E 03            [ 2]  171 	ldw	x, (0x03, sp)
+      0080D9 1D 00 01         [ 2]  172 	subw	x, #0x0001
+      0080DC 1F 07            [ 2]  173 	ldw	(0x07, sp), x
+      0080DE A2 00            [ 1]  174 	sbc	a, #0x00
+      0080E0 97               [ 1]  175 	ld	xl, a
+      0080E1 7B 01            [ 1]  176 	ld	a, (0x01, sp)
+      0080E3 A2 00            [ 1]  177 	sbc	a, #0x00
+      0080E5 95               [ 1]  178 	ld	xh, a
+                                    179 ; genAssign
+      0080E6 02               [ 1]  180 	rlwa	x
+      0080E7 6B 01            [ 1]  181 	ld	(0x01, sp), a
+      0080E9 01               [ 1]  182 	rrwa	x
+      0080EA 16 07            [ 2]  183 	ldw	y, (0x07, sp)
+      0080EC 17 03            [ 2]  184 	ldw	(0x03, sp), y
+      0080EE 9F               [ 1]  185 	ld	a, xl
+                                    186 ; genIfx
+      0080EF 16 07            [ 2]  187 	ldw	y, (0x07, sp)
+      0080F1 26 E4            [ 1]  188 	jrne	00105$
+                                    189 ; peephole j22 jumped to 00105$ directly instead of via 00122$.
+      0080F3 5D               [ 2]  190 	tnzw	x
+      0080F4 27 CF            [ 1]  191 	jreq	00106$
+                                    192 ; peephole j19 jumped to 00106$ directly instead of via 00123$.
+                                    193 ; peephole j30 removed unused label 00122$.
+                                    194 ; peephole j5 changed absolute to relative unconditional jump.
+                                    195 ; peephole j30 removed unused label 00123$.
+                                    196 ; genGoto
+      0080F6 20 DF            [ 2]  197 	jra	00105$
+                                    198 ; peephole j2d removed unreachable jump to 00106$.
+                                    199 ; peephole j5 changed absolute to relative unconditional jump.
+                                    200 ; genLabel
+                                    201 ; peephole j30 removed unused label 00108$.
+                                    202 ; genEndFunction
+      0080F8 5B 08            [ 2]  203 	addw	sp, #8
+                           00005A   204 	C$serial.c$49$1$13 ==.
+                           00005A   205 	XG$main$0$0 ==.
+      0080FA 81               [ 4]  206 	ret
+                                    207 	.area CODE
+                           00005B   208 Fserial$__str_0$0$0 == .
+      0080FB                        209 ___str_0:
+      0080FB 48 65 6C 6C 6F 20 57   210 	.ascii "Hello World!"
+             6F 72 6C 64 21
+      008107 0A                     211 	.db 0x0A
+      008108 00                     212 	.db 0x00
                                     213 	.area INITIALIZER
                                     214 	.area CABS (ABS)

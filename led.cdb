@@ -8,5 +8,5 @@ S:G$clock$0$0({2}DF,SI:U),C,0,0
 S:G$main$0$0({2}DF,SV:S),C,0,0
 L:C$led.c$24$1$2:80BC
 L:XG$clock$0$0:80BC
-L:C$led.c$47$1$4:80EE
-L:XG$main$0$0:80EE
+L:C$led.c$47$1$4:80F0
+L:XG$main$0$0:80F0
