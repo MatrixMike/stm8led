@@ -1,0 +1,19 @@
+
+kern  :info  : [Sun Mar 31 10:06:53 2019] usb 3-2: USB disconnect, device number 4
+kern  :info  : [Sun Mar 31 10:06:57 2019] usb 3-2: new full-speed USB device number 5 using uhci_hcd
+kern  :info  : [Sun Mar 31 10:06:57 2019] usb 3-2: New USB device found, idVendor=0483, idProduct=3744
+kern  :info  : [Sun Mar 31 10:06:57 2019] usb 3-2: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+kern  :info  : [Sun Mar 31 10:06:57 2019] usb 3-2: Product: STM32 STLink
+kern  :info  : [Sun Mar 31 10:06:57 2019] usb 3-2: Manufacturer: STMicroelectronics
+kern  :info  : [Sun Mar 31 10:06:57 2019] usb 3-2: SerialNumber: 4
+kern  :info  : [Sun Mar 31 10:06:57 2019] usb-storage 3-2:1.0: USB Mass Storage device detected
+kern  :info  : [Sun Mar 31 10:06:57 2019] scsi host2: usb-storage 3-2:1.0
+kern  :notice: [Sun Mar 31 10:06:58 2019] scsi 2:0:0:0: Direct-Access     STM32                          PQ: 0 ANSI: 0
+kern  :notice: [Sun Mar 31 10:06:58 2019] sd 2:0:0:0: Attached scsi generic sg2 type 0
+kern  :notice: [Sun Mar 31 10:06:58 2019] sd 2:0:0:0: [sdb] 64000 512-byte logical blocks: (32.8 MB/31.3 MiB)
+kern  :notice: [Sun Mar 31 10:06:58 2019] sd 2:0:0:0: [sdb] Write Protect is on
+kern  :debug : [Sun Mar 31 10:06:58 2019] sd 2:0:0:0: [sdb] Mode Sense: 03 00 80 00
+kern  :err   : [Sun Mar 31 10:06:58 2019] sd 2:0:0:0: [sdb] No Caching mode page found
+kern  :err   : [Sun Mar 31 10:06:58 2019] sd 2:0:0:0: [sdb] Assuming drive cache: write through
+kern  :info  : [Sun Mar 31 10:06:58 2019] usb 3-2: reset full-speed USB device number 5 using uhci_hcd
+
