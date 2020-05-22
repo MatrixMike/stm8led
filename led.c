@@ -48,11 +48,14 @@ main (void)
   PD_CR1 = 0x01;		// which register is this
   testInt++;
   //     testInt +=3;
-  for (;;)			// infinite loop
-    //     testInt ++;
-    // maybe read the target variable with a numeric zero 
-    // then select alternative to 0
-    PD_ODR = 0x2 | clock () % 1000 < 500;	//  was     PD_ODR = clock () % 1000 < 500;
-  PD_ODR = PD_ODR | 0x2;	// set same value on another pin
+  int cv;
+  for (cv = 1; cv < 3; cv++)
+    {				// was infinite loop
+      //     testInt ++;
+      // maybe read the target variable with a numeric zero 
+      // then select alternative to 0
+      PD_ODR = 0x2 | clock () % 1000 < 500;	//  was     PD_ODR = clock () % 1000 < 500;
+      PD_ODR = PD_ODR | 0x2;
+    }				// set same value on another pin
 
 }
