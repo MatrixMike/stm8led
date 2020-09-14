@@ -27,7 +27,7 @@
 //	USART1_DR = c;
 //}
 
-void main(void)
+int main(void)   // was void
 {
 	unsigned long i = 0;
 

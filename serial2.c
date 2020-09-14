@@ -30,7 +30,7 @@
 void main(void)
 {
 	unsigned long i = 0;
-	char letters  "qweqr";
+//	char letters  = "qweqr";    // mike fix this for sdcc 
 
 	CLK_DIVR = 0x00; // Set the frequency to 16 MHz
 	CLK_PCKENR1 = 0xFF; // Enable peripherals

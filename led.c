@@ -20,19 +20,21 @@
         .db         1000
         */
 
-clock (void)
+int clock (void)
 {
   unsigned char h = TIM1_CNTRH;
   unsigned char l = TIM1_CNTRL;
   return ((unsigned int) (h) << 8 | l);
 }
 
-void
-main (void)
+int main (void)
 {
+//	unsigned int	testInt = 1;
+   int testInt = 1000;	// init var to 1000
   unsigned int ct = 1000;
   char c[] = "abcd";
   char hp[] = "Harry Potter";
+  int cv;
   CLK_DIVR = 0x00;		// Set the clk frequency to 16 MHz
 
   // Configure timer
@@ -40,7 +42,7 @@ main (void)
   TIM1_PSCRH = 0x3e;
   TIM1_PSCRL = 0x80;
 //  vol (uint16_t) testInt = 1000;
-  unsigned long testInt = thousand;	// init var to 1000
+
   // Enable timer
   TIM1_CR1 = 0x01;
 
@@ -48,8 +50,8 @@ main (void)
   PD_CR1 = 0x01;		// which register is this
   testInt++;
   //     testInt +=3;
-  int cv;
-  for (cv = 1; cv < 3; cv++)
+  // int cv;
+  for ( cv = 1; cv < 3; cv++)
     {				// was infinite loop
       //     testInt ++;
       // maybe read the target variable with a numeric zero 
